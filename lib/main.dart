@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:getx_mvvm_and_mvc/view/splah_screen/splash_screen.dart';
+import 'package:getx_mvvm_and_mvc/resource/routes/routes.dart';
 
 void main() async {
   await GetStorage.init();
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       themeMode: ThemeMode.system,
-      home: SplashScreen(),
+      getPages: AppRoutes.appRoutes(),
     );
   }
 }
