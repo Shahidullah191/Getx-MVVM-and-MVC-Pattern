@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:getx_mvvm_and_mvc/utils/utils.dart';
 
-import '../../data/app_exceptions.dart';
+import '../../resource/components/Internet_exception_widgets.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -16,9 +17,13 @@ class _SplashScreenState extends State<SplashScreen> {
         appBar: AppBar(
           title: const Text('Splash Screen'),
         ),
+        body: InternetExceptionWidget(
+          onPress: () {},
+        ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            throw InternetException('No Internet Connection');
+            Utils.toastMessage("dhbhbe");
+            Utils.toastMessageCenter("rueui8utg8r");
           },
           child: const Icon(Icons.add),
         ));
